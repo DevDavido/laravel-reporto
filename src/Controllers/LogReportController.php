@@ -18,7 +18,7 @@ class LogReportController extends Controller
      * curl -d '[{ "type": "csp", "age": 10, "url": "https://example.com/vulnerable-page/", \
      * "user_agent": "Mozilla/5.0 Firefox/60.0", "body": { "blocked": "https://evil.com/evil.js", \
      * "directive": "script-src", "status": 200, "referrer": "https://evil.com/" }}]' \
-     * -X POST -H "Content-Type: application/reports+json" https://domain.localhost/log/network-errors/
+     * -X POST -H "Content-Type: application/reports+json" https://domain.localhost/log/csp-reports/
      * ```
      * @throws NotAcceptableHttpException
      * @throws BadRequestHttpException
