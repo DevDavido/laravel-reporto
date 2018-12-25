@@ -23,7 +23,7 @@ If you've found a bug regarding security please mail [github@diskoboss.de](mailt
 You can install this package via composer using this command:
 
 ```bash
-composer require devdavido/laravel-reporto:^1.0.1
+composer require devdavido/laravel-reporto:^1.1
 ```
 
 The package will automatically register itself and add a `Report-To` header to your `web` routes.
