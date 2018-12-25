@@ -30,9 +30,16 @@ class LogReportController extends Controller
         $allowedContentTypes = ['application/json', 'application/csp-report', 'application/reports+json'];
         abort_unless(in_array(mb_strtolower($request->header('Content-Type')), $allowedContentTypes), 406);
 
-        $payload = $request->json();
-        abort_unless($payload->count(), 400);
+        $payload = collect($request->json());
+        abort_if($payload->isEmpty(), 400);
 
-        Log::error('Report API report:', $payload->all());
+        $report = $payload->reject(function($value) {
+            if (!isset($value['body']['sourceFile'])) return false;
+            return str_is(config('reporto.exclude_source_files'), $value['body']['sourceFile']);
+        });
+
+        if ($report->isNotEmpty()) {
+            Log::error('Report API report:', $report->all());
+        }
     }
 }

@@ -23,7 +23,7 @@ If you've found a bug regarding security please mail [github@diskoboss.de](mailt
 You can install this package via composer using this command:
 
 ```bash
-composer require devdavido/laravel-reporto:^1.0
+composer require devdavido/laravel-reporto:^1.0.1
 ```
 
 The package will automatically register itself and add a `Report-To` header to your `web` routes.
@@ -48,6 +48,11 @@ return [
      * Enables the reporting API for all subdomains
      */
     'include_subdomains' => env('REPORTING_API_INCLUDE_SUBDOMAINS', false),
+
+    /*
+     * Exclude certain source files from being logged
+     */
+    'exclude_source_files' => env('REPORTING_API_EXCLUDE_SOURCE_FILES', ['chrome-extension://*']),
 
     /*
      * Defines cached lifetime of all endpoint in seconds (86400s = 1 day)

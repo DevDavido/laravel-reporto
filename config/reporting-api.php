@@ -12,6 +12,11 @@ return [
     'include_subdomains' => env('REPORTING_API_INCLUDE_SUBDOMAINS', false),
 
     /*
+     * Exclude certain source files from being logged
+     */
+    'exclude_source_files' => env('REPORTING_API_EXCLUDE_SOURCE_FILES', ['chrome-extension://*']),
+
+    /*
      * Defines cached lifetime of all endpoint in seconds (86400s = 1 day)
      */
     'endpoint_max_age' => env('REPORTING_API_MAX_AGE', 86400),
