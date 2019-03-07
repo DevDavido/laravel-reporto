@@ -3,8 +3,9 @@
 namespace DevDavido\Reporto\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotAcceptableHttpException;
 
@@ -35,7 +36,7 @@ class LogReportController extends Controller
 
         $report = $payload->reject(function($value) {
             if (!isset($value['body']['sourceFile'])) return false;
-            return str_is(config('reporto.exclude_source_files'), $value['body']['sourceFile']);
+            return Str::is(config('reporto.exclude_source_files'), $value['body']['sourceFile']);
         });
 
         if ($report->isNotEmpty()) {
