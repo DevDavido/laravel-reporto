@@ -14,3 +14,6 @@ All notable changes to `laravel-reporto` will be documented in this file.
 
 ## 1.2.1 - 2019-03-09
 - Fix for Laravel 5.8 support: Replaced str_is with Str::is
+
+## 1.3 - 2019-10-02
+- Added support for Laravel 6.0
