@@ -13,10 +13,12 @@ Find yourself stuck using the package? Found a bug? Do you have general question
 
 If you've found a bug regarding security please mail [github@diskoboss.de](mailto:github@diskoboss.de) instead of using the issue tracker.
 
-## Requirements
+## Minimum requirements
 
-- PHP 7+
-- Laravel 5.5+
+- PHP 7.2+
+- Laravel 6+
+
+For support of older Laravel versions, check out previous releases of this package.
 
 ## Installation
 

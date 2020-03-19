@@ -16,4 +16,11 @@ All notable changes to `laravel-reporto` will be documented in this file.
 - Fix for Laravel 5.8 support: Replaced str_is with Str::is
 
 ## 1.3 - 2019-10-02
-- Added support for Laravel 6.0
+- Added support for Laravel 6
+
+## 1.4 - 2020-03-19
+- Dropped support for PHP 7.0 / 7.1
+- Dropped support for Laravel 5.8
+- Added support for PHP 7.4
+- Added support for Laravel 7
+- Updated dependency packages
