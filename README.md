@@ -15,10 +15,10 @@ If you've found a bug regarding security please mail [github@diskoboss.de](mailt
 
 ## Minimum requirements
 
-- PHP 7.2+
+- PHP 7.3+
 - Laravel 6+
 
-For support of older Laravel versions, check out previous releases of this package.
+For support of older PHP / Laravel versions, check out previous releases of this package.
 
 ## Installation
 
