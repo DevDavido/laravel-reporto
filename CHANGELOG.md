@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-reporto` will be documented in this file.
 
+## 1.6 - 2021-01-20
+- Added support for PHP 8
+- Updated dependency packages
+
 ## 1.5 - 2020-09-08
 - Added support for Laravel 8
 - Dropped support for PHP 7.2
