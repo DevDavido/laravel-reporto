@@ -1,0 +1,41 @@
+name: tests
+
+on: [push, pull_request]
+
+jobs:
+    test:
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                php: [8.0, 7.4, 7.3]
+                dependency-version: [prefer-stable]
+                os: [ubuntu-latest]
+
+        name: PHP ${{ matrix.php }} – ${{ matrix.os }}
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php }}
+                  coverage: xdebug
+
+            - name: Install dependencies
+              run: composer update --${{ matrix.dependency-version }} --prefer-source --no-interaction
+
+            - name: Setup problem matches
+              run: |
+                  echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+                  echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
+
+            - name: Execute tests
+              run: vendor/bin/phpunit --configuration=phpunit.xml.dist --coverage-text --coverage-clover=coverage.clover
+
+            - name: Downloading scrutinizer
+              run: wget https://scrutinizer-ci.com/ocular.phar
+
+            - name: Upload reports for analysis
+              run: php ocular.phar code-coverage:upload --format=php-clover coverage.clover
