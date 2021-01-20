@@ -33,7 +33,9 @@ jobs:
               with:
                   path: ${{ steps.composer-cache.outputs.dir }}
                   key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
-                  restore-keys: ${{ runner.os }}-composer-
+                  restore-keys: |
+                      ${{ runner.os }}-composer-
+                      ${{ runner.os }}-
 
             - name: Install dependencies
               run: composer update --${{ matrix.dependency-version }} --prefer-source --no-interaction

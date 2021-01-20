@@ -1,7 +1,7 @@
 # Reporto: Report browser errors to the server
 
 [![Latest Version](https://img.shields.io/github/release/DevDavido/laravel-reporto.svg?style=flat-square)](https://github.com/DevDavido/laravel-reporto/releases)
-[![Build Status](https://img.shields.io/travis/DevDavido/laravel-reporto/master.svg?style=flat-square)](https://travis-ci.org/DevDavido/laravel-reporto)
+[![Build Status](https://img.shields.io/github/workflow/status/DevDavido/laravel-reporto/tests.svg?style=flat-square)](https://github.com/DevDavido/laravel-reporto/actions)
 [![Quality Score](https://img.shields.io/scrutinizer/g/DevDavido/laravel-reporto.svg?style=flat-square)](https://scrutinizer-ci.com/g/DevDavido/laravel-reporto)
 [![Total Downloads](https://img.shields.io/packagist/dt/DevDavido/laravel-reporto.svg?style=flat-square)](https://packagist.org/packages/DevDavido/laravel-reporto)
 
