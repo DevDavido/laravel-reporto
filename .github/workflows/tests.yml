@@ -35,7 +35,9 @@ jobs:
               run: vendor/bin/phpunit --configuration=phpunit.xml.dist --coverage-text --coverage-clover=coverage.clover
 
             - name: Downloading scrutinizer
-              run: wget https://scrutinizer-ci.com/ocular.phar
+              run: wget https://scrutinizer-ci.com/ocular.phar --no-verbose
 
             - name: Upload reports for analysis
               run: php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+              with:
+                php-version: '7.4'
