@@ -6,6 +6,7 @@ jobs:
     test:
         runs-on: ${{ matrix.os }}
         strategy:
+            fail-fast: false
             matrix:
                 php: [8.0, 7.4, 7.3]
                 dependency-version: [prefer-stable]
@@ -34,10 +35,5 @@ jobs:
             - name: Execute tests
               run: vendor/bin/phpunit --configuration=phpunit.xml.dist --coverage-text --coverage-clover=coverage.clover
 
-            - name: Downloading scrutinizer
-              run: wget https://scrutinizer-ci.com/ocular.phar --no-verbose
-
             - name: Upload reports for analysis
-              run: php ocular.phar code-coverage:upload --format=php-clover coverage.clover
-              with:
-                php-version: '7.4'
+              run: vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover
