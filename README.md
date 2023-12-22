@@ -11,7 +11,7 @@ This package makes use of the [W3C Reporting API](https://w3c.github.io/reportin
 
 Find yourself stuck using the package? Found a bug? Do you have general questions or suggestions for improving this package? Feel free to [create an issue on GitHub](https://github.com/devdavido/laravel-reporto/issues), we'll try to address it as soon as possible.
 
-If you've found a bug regarding security please mail [github@diskoboss.de](mailto:github@diskoboss.de) instead of using the issue tracker.
+If you've found a bug regarding security please mail github{at}diskoboss{døt}de instead of using the issue tracker.
 
 ## Minimum requirements
 
@@ -104,7 +104,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## Security
 
-If you discover any security related issues, please email [github@diskoboss.de](mailto:github@diskoboss.de) instead of using the issue tracker.
+If you discover any security related issues, please email github{at}diskoboss{døt}de instead of using the issue tracker.
 
 ## Credits
 

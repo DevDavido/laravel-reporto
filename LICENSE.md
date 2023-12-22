@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) DevDavido <github@diskoboss.de>
+Copyright (c) DevDavido (https://github.com/DevDavido)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
