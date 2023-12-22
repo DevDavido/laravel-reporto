@@ -1,8 +1,8 @@
 # Reporto: Report browser errors to the server
 
-[![Latest Version](https://img.shields.io/github/release/DevDavido/laravel-reporto.svg?style=flat-square)](https://github.com/DevDavido/laravel-reporto/releases)
-[![Build Status](https://img.shields.io/github/workflow/status/DevDavido/laravel-reporto/tests.svg?style=flat-square)](https://github.com/DevDavido/laravel-reporto/actions)
-[![Quality Score](https://img.shields.io/scrutinizer/g/DevDavido/laravel-reporto.svg?style=flat-square)](https://scrutinizer-ci.com/g/DevDavido/laravel-reporto)
+[![Latest Version](https://img.shields.io/github/v/release/DevDavido/laravel-reporto.svg?style=flat-square)](https://github.com/DevDavido/laravel-reporto/releases)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/DevDavido/laravel-reporto/tests.yml?style=flat-square)](https://github.com/DevDavido/laravel-reporto/actions/workflows/tests.yml)
+[![Quality Score](https://img.shields.io/scrutinizer/quality/g/DevDavido/laravel-reporto.svg?style=flat-square)](https://scrutinizer-ci.com/g/DevDavido/laravel-reporto/)
 [![Total Downloads](https://img.shields.io/packagist/dt/DevDavido/laravel-reporto.svg?style=flat-square)](https://packagist.org/packages/DevDavido/laravel-reporto)
 
 This package makes use of the [W3C Reporting API](https://w3c.github.io/reporting/) and provides an easy plug-and-play package for your existing project. It will automatically add the necessary Report HTTP headers and log all configured browser errors to your Laravel backend.
