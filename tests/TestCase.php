@@ -26,6 +26,13 @@ class TestCase extends Orchestra
         $this->setUpGlobalMiddleware();
     }
 
+    protected function tearDown(): void
+    {
+        parent::tearDown();
+
+        $this->deleteDirectory($this->getTempDirectory());
+    }
+
     protected function initializeDirectory($directory): void
     {
         if (File::isDirectory($directory)) {
@@ -33,6 +40,13 @@ class TestCase extends Orchestra
         }
 
         File::makeDirectory($directory);
+    }
+
+    protected function deleteDirectory($directory): void
+    {
+        if (File::isDirectory($directory)) {
+            File::deleteDirectory($directory);
+        }
     }
 
     protected function getTempDirectory($suffix = ''): string
