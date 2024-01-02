@@ -15,8 +15,8 @@ If you've found a bug regarding security please mail github{at}diskoboss{døt}de
 
 ## Minimum requirements
 
-- PHP 7.3+
-- Laravel 6+
+- PHP 8.0+
+- Laravel 9+
 
 For support of older PHP / Laravel versions, check out previous releases of this package.
 
