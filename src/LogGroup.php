@@ -6,25 +6,13 @@ use JsonSerializable;
 
 class LogGroup implements JsonSerializable
 {
-    /**
-     * @var string
-     */
-    private $group;
+    private string $group;
 
-    /**
-     * @var int
-     */
-    private $max_age;
+    private int $max_age;
 
-    /**
-     * @var array
-     */
-    private $endpoints;
+    private array $endpoints;
 
-    /**
-     * @var bool
-     */
-    private $include_subdomains;
+    private bool $include_subdomains;
 
     /**
      * Assign all values and create new LogEndpoint.
@@ -42,9 +30,10 @@ class LogGroup implements JsonSerializable
     }
 
     /**
-     * @return array|mixed
+     * @return array
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array
+    {
         return get_object_vars($this);
     }
 }

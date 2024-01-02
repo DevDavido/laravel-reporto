@@ -7,15 +7,9 @@ use JsonSerializable;
 
 class LogEndpoint implements JsonSerializable
 {
-    /**
-     * @var string
-     */
-    private $url;
+    private string $url;
 
-    /**
-     * @var int
-     */
-    private $priority;
+    private int $priority;
 
     /**
      * Create log endpoint.
@@ -30,9 +24,10 @@ class LogEndpoint implements JsonSerializable
     }
 
     /**
-     * @return array|mixed
+     * @return array
      */
-    public function jsonSerialize() {
+    public function jsonSerialize(): array
+    {
         return get_object_vars($this);
     }
 }

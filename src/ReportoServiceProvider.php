@@ -17,7 +17,7 @@ class ReportoServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->publishes([
             __DIR__ . '/../config/reporting-api.php' => config_path('reporting-api.php')
@@ -29,7 +29,7 @@ class ReportoServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/reporting-api.php', 'reporto');
 
@@ -44,7 +44,8 @@ class ReportoServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function registerRoutes() {
+    public function registerRoutes(): void
+    {
         $routeConfig = [
             'namespace' => 'DevDavido\Reporto\Controllers',
             'prefix' => $this->getConfig()->get('reporto.route_prefix'),
@@ -63,14 +64,16 @@ class ReportoServiceProvider extends ServiceProvider
     /**
      * @return Router
      */
-    public function getRouter() {
+    public function getRouter(): Router
+    {
         return $this->app['router'];
     }
 
     /**
      * @return Repository
      */
-    public function getConfig() {
+    public function getConfig(): Repository
+    {
         return $this->app['config'];
     }
 }

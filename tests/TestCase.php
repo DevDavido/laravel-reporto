@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 
 class TestCase extends Orchestra
 {
-    protected $uri = '/reporto-test';
+    protected string $uri = '/reporto-test';
 
     protected function setUp(): void
     {
@@ -26,7 +26,7 @@ class TestCase extends Orchestra
         $this->setUpGlobalMiddleware();
     }
 
-    protected function initializeDirectory($directory)
+    protected function initializeDirectory($directory): void
     {
         if (File::isDirectory($directory)) {
             File::deleteDirectory($directory);
@@ -64,7 +64,7 @@ class TestCase extends Orchestra
         return [ReportoServiceProvider::class];
     }
 
-    protected function getEnvironmentSetUp($app)
+    protected function getEnvironmentSetUp($app): void
     {
         $app->config->set('logging.channels.single', [
             'driver' => 'single',
@@ -73,7 +73,7 @@ class TestCase extends Orchestra
         ]);
     }
 
-    protected function setUpRoutes()
+    protected function setUpRoutes(): void
     {
         foreach (['get', 'post', 'put', 'patch', 'delete'] as $method) {
             Route::$method($this->uri, function () use ($method) {
@@ -82,7 +82,7 @@ class TestCase extends Orchestra
         }
     }
 
-    protected function setUpGlobalMiddleware()
+    protected function setUpGlobalMiddleware(): void
     {
         $this->app[Kernel::class]->pushMiddleware(AddReportToHeader::class);
     }

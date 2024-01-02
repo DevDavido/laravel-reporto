@@ -13,10 +13,8 @@ class AddReportToHeader
 
     /**
      * All response log groups.
-     *
-     * @var LogGroups
      */
-    private $logGroups;
+    private LogGroups $logGroups;
 
     /**
      * Set log groups.
@@ -33,9 +31,9 @@ class AddReportToHeader
      *
      * @param Request $request
      * @param Closure $next
-     * @return mixed|Response
+     * @return mixed
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next): mixed
     {
         $response = $next($request);
         if (!$response instanceof Response || $response->headers->has(self::REPORT_TO)) {

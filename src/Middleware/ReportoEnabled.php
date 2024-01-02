@@ -14,7 +14,7 @@ class ReportoEnabled
      * @param Closure $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle(Request $request, Closure $next): mixed
     {
         if (!config('reporto.enabled')) {
             abort(404);

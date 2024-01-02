@@ -26,7 +26,7 @@ class LogReportController extends Controller
      * @param Request $request
      * @return void
      */
-    public function handle(Request $request)
+    public function handle(Request $request): void
     {
         $allowedContentTypes = ['application/json', 'application/csp-report', 'application/reports+json'];
         abort_unless(in_array(mb_strtolower($request->header('Content-Type')), $allowedContentTypes), 406);

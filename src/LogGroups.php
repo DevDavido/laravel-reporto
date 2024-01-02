@@ -6,10 +6,7 @@ use Illuminate\Support\Collection;
 
 class LogGroups
 {
-    /**
-     * @var Collection
-     */
-    private $groups;
+    private Collection $groups;
 
     /**
      * Create log group for each group from config.
@@ -23,16 +20,19 @@ class LogGroups
     }
 
     /**
+     * @param $name string Log group name
      * @return LogGroup
      */
-    public function createLogGroup($name) {
+    public function createLogGroup(string $name): LogGroup
+    {
         return new LogGroup($name, config('reporto.endpoint_max_age'), config('reporto.include_subdomains'));
     }
 
     /**
      * @return string
      */
-    public function __toString() {
+    public function __toString()
+    {
         return trim($this->groups->toJson(JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE), '[]');
     }
 }
