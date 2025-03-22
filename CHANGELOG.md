@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-reporto` will be documented in this file.
 
+## 1.9 - 2025-03-22
+- Added support for PHP 8.4
+- Added support for Laravel 12
+
 ## 1.8 - 2024-05-10
 - Added support for Laravel 11
 - Upgraded actions/cache to v4
