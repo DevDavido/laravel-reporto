@@ -80,7 +80,7 @@ return [
 
 ## Support me
 
-If you installed the package and it was useful for you or your business, please don't hesitate to make a donation (as I am a student). Thank you!
+If you installed the package and it was useful for you or your business, please don't hesitate to make a donation. Thank you!
 
 <a href="https://www.buymeacoffee.com/devdavido" target="_blank"><img src="https://github.com/DevDavido/laravel-reporto/assets/997605/b7e908c3-0407-4b17-83b7-94b760a4c653" width="180" alt="Buy me a coffee"></a>
 
