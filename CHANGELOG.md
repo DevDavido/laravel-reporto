@@ -3,6 +3,7 @@
 All notable changes to `laravel-reporto` will be documented in this file.
 
 ## 1.10 - 2026-04-06
+- Added support for PHP 8.5
 - Added support for Laravel 13
 
 ## 1.9 - 2025-03-22
